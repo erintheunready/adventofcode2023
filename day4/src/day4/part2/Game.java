@@ -1,4 +1,4 @@
-package day4.part1;
+package day4.part2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +36,11 @@ public class Game {
             }
         }
         return wins;
+    }
+
+    public int getNumWins() {
+        List<Integer> wins = getWinningNumbers();
+        return wins.size();
     }
 
     public int computeWinSum() {
