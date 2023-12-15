@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Game {
-    private List<Integer> winningNumbers = new ArrayList<>();
-    private List<Integer> yourNumbers = new ArrayList<>();
+    private final List<Integer> winningNumbers = new ArrayList<>();
+    private final List<Integer> yourNumbers = new ArrayList<>();
 
     public Game(String gameLine) {
         String gameNumbers = gameLine.split(":")[1].trim();
@@ -17,13 +17,13 @@ public class Game {
 
         String[] winningNumberStrArr = winningNumberStr.split(" ");
         for(String a : winningNumberStrArr){
-            if(a.length() > 0){
+            if(!a.isEmpty()){
                 winningNumbers.add(Integer.parseInt((a)));
             }
         }
         String[] yourNumbersStrArr = yourNumberStr.split(" ");
         for(String a : yourNumbersStrArr) {
-            if(a.length() > 0) {
+            if(!a.isEmpty()) {
                 yourNumbers.add(Integer.parseInt((a)));
             }
         }
