@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     private static Map<String, Integer> cardMap;
@@ -12,7 +9,7 @@ public class Main {
             cardMap.put(Integer.toString(i), i - 2);
         }
         cardMap.put("T", 9);
-        cardMap.put("J", 10);
+        cardMap.put("J", -1);
         cardMap.put("Q", 11);
         cardMap.put("K", 12);
         cardMap.put("A", 13);
@@ -26,6 +23,9 @@ public class Main {
 
         // Sort the list
         quickSortHand(handList, 0, handList.size() - 1);
+        for(Hand hand : handList){
+            System.out.println(Arrays.toString(hand.getHandCards()) + " " + hand.getHandType());
+        }
 
         int sum = 0;
         for(int i = 0; i < handList.size(); i++){
