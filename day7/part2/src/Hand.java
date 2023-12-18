@@ -48,7 +48,7 @@ public class Hand {
         if(numGroups == 4){
             return HandType.ONE_PAIR;
         }
-        if(numGroups == 1){
+        if(numGroups < 2){
             return HandType.FIVE_OF_A_KIND;
         }
 
